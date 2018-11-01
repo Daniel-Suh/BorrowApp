@@ -1,0 +1,18 @@
+h1 {
+  font: Sans-Serif;
+  font-size: 50;
+/*  background: ;*/
+  margin: 0;
+  padding: 0;
+}
+.img-size {
+    position: relative;
+    float: left;
+    width:  200px;
+/*    height: 100px;*/
+/*
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+*/
+}
