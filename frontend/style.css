@@ -121,9 +121,9 @@ span.psw {
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 5px auto; /* 15% from the top and centered */
+    margin: 10px auto; /* 15% from the top and centered */
     border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
+    width: 100%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
