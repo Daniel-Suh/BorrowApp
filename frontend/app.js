@@ -4,7 +4,7 @@ var angularApp = angular.module('angularApp', []);
 // CONTROLLERS
 angularApp.controller('mainController', ['$scope', '$http', function ($scope, $http) {
     
-    $scope.appName = 'Borrow';
+    $scope.appName = 'Borrowing Like a Champion Today';
     
     // Simple GET request example:
     $http({
