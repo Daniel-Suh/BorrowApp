@@ -146,8 +146,8 @@ span.psw {
 
 /* Add Zoom Animation */
 .animate {
-    -webkit-animation: animatezoom 1s;
-    animation: animatezoom 1s
+    -webkit-animation: animatezoom .3s;
+    animation: animatezoom .3s
 }
 
 @-webkit-keyframes animatezoom {
