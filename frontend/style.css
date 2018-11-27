@@ -29,6 +29,7 @@ nav {
 }
 body {
     background-color: ;
+    
 }
 /* Bordered form */
 form {
@@ -83,6 +84,7 @@ img.avatar {
 /* Add padding to containers */
 .container {
     padding: 16px;
+    height: 100%;
 }
 
 /* The "Forgot password" text */
@@ -158,4 +160,8 @@ span.psw {
 @keyframes animatezoom {
     from {transform: scale(0)} 
     to {transform: scale(1)}
+}
+
+.div{
+    height: 100%;
 }
