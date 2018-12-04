@@ -1,8 +1,15 @@
 // require (imports)
-const express = require('express');
+const express = require("express");
+const stripe = require("stripe")("sk_test_RIEAJGcwrA7GwhdMunctWAmm");
+const bodyParser = require("body-parser");
 //const stripe = require("stripe")("sk_test_4eC39HqLyjWDarjtT1zdp7dc");
 // define vars
-const app = express();
+var app = express();
+
+app.set('views', __dirname + '/views');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+
 // enable CORS on /list route only
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -25,6 +32,25 @@ app.get('/', (req, res) => {
     ];
     res.send(logo);
 })
+app.post('/charge', function(req, res){
+    var token = req.body.stripeToken;
+    var chargeAmount = req.body.chargeAmount;
+    console.log('asdf');
+    return stripe.charges.create({
+        amount: chargeAmount,
+        currency: "usd",
+        source: token
+    }, function(err, charge){
+        if(err) {
+            if(err.type === "StripeCardError"){
+            console.log("Your Card was declined");
+            }
+            return res.redirect('http://localhost:63622/payfailed.html').send(err);
+        }
+        return res.redirect('http://localhost:63622/paysuccess.html').send(charge);
+    });
+});
+
 // exports
 const port = 3000;
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

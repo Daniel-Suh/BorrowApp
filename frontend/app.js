@@ -24,3 +24,20 @@ angularApp.controller('mainController', ['$scope', '$http', function ($scope, $h
 
 }]);
 
+/*
+angularApp.controller('paymentController', ['$scope', '$http', function ($scope, $http) {
+
+    function MyCtrl (StripeElements) {
+        var elements = StripeElements.elements()
+        var element = elements.create('card', {})
+       
+        element.on('change', handleChange)
+        
+        this.element = element
+       
+        function handleChange (e) {
+          this.cardErrors = e.error ? e.error.message : ''
+        }
+    }
+
+}]);*/
