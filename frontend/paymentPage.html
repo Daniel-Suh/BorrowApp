@@ -1,0 +1,13 @@
+<script src="https://js.stripe.com/v3/"></script>
+
+<form ng-submit="$ctrl.handleSubmit" method="post" id="payment-form">
+ 
+  <stripe-element instance="$ctrl.element">
+    <!-- a Stripe Element will be inserted here. -->
+  </stripe-element>
+ 
+  <!-- Used to display form errors -->
+  <div id="card-errors" role="alert">{{$ctrl.cardErrors}}</div>
+ 
+  <button>Submit Payment</button>
+</form>
