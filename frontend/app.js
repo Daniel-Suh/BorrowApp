@@ -1,5 +1,9 @@
 // MODULE
-var angularApp = angular.module('angularApp', []);
+var angularApp = angular.module('angularApp', ['angularjs-stripe-elements']);
+
+angularApp.config(function (StripeElementsProvider) {
+    StripeElementsProvider.setAPIKey("sk_test_4eC39HqLyjWDarjtT1zdp7dc")
+});
 
 // CONTROLLERS
 angularApp.controller('mainController', ['$scope', '$http', function ($scope, $http) {
