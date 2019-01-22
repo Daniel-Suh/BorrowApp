@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "angular": "^1.7.5",
+    "angular-parse": "^0.2.2",
     "express": "^4.16.4",
+    "parse": "^2.1.0",
     "stripe": "^6.13.0"
   },
   "devDependencies": {},
