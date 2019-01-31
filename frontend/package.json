@@ -1,13 +1,14 @@
 {
-  "name": "borrowapp",
+  "name": "frontend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
     "angular": "^1.7.5",
     "angular-parse": "^0.2.2",
-    "express": "^4.16.4",
-    "parse": "^2.1.0",
+    "angular-stripe": "^5.0.0",
+    "angularjs-stripe-elements": "^1.0.0",
+    "parse": "^1.11.1",
     "stripe": "^6.13.0"
   },
   "devDependencies": {},
