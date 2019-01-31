@@ -1,53 +1,4 @@
-<!DOCTYPE html>
-<html lang="en-us" ng-app="angularApp">
-
-<head>
-    <title>Borrow</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta charset="UTF-8">
-
-    <!-- load bootstrap and fontawesome via CDN -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-mapboxgl-directive/0.43.2/angular-mapboxgl-directive.min.css">
-
-    <link rel="stylesheet" href="style.css" />
-    <style>
-        html, body
-            {
-                font-size: 1.1em;
-            }
-        </style>
-    <!-- load angular via CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
-    <script src="app.js"></script>
-    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-mapboxgl-directive/0.43.2/angular-mapboxgl-directive.min.js"></script>
-
-    <script>
-        //        <!-- Get the modal -->
-        var modal = document.getElementById('id01');
-
-//        <!--When the user clicks anywhere outside of the modal, close it-->
-        window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-                }
-        }
-        </script>
-    <!--        Load in a font-->
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
-        @import url('https://fonts.googleapis.com/css?family=PT+Serif');
-        @import url('https://fonts.googleapis.com/css?family=PT+Serif|Permanent+Marker');
-        </style>
-</head>
-
-<body>
-
-    <header>
-        <nav class="navbar navbar-default">
+<nav class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#/">Home</a>
@@ -91,11 +42,3 @@
             </div>
         </nav>
     </header> <!-- pop-up for log-in -->
-            <button class="menu-button" id="home-button" onclick href="#/" > </button>
-    <div class="container">
-        <div ng-view>
-        </div>
-    </div>
-</body>
-
-</html>

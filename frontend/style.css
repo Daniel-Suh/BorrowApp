@@ -1,22 +1,26 @@
 h1 {
-  font-family: 'Permanent Marker', sans-serif;
+  font-family: 'Century Gothic', sans-serif;
   font-size: 50px;
   color: #0C2340;
-/*  background: ;*/
+  background: #0000;
   margin: 0;
   padding: 0;
+font-weight: bold;
 }
 h2 {
-  font-family: 'Permanent Marker', sans-serif;
+  font-family: 'Century Gothic', sans-serif;
   font-size: 30px;
   color: #0C2340;
-  margin: 0;
+  margin: 25px;
   padding: 0;
+    font-weight: bold;
 }
 .img-size {
     position: relative;
     float: left;
     width:  200px;
+    /*height: 200px;
+    /*border-radius: 50%;
 /*    height: 100px;*/
 /*
     background-position: 50% 50%;
@@ -28,7 +32,7 @@ nav {
     background-color: black;
 }
 body {
-    background-color: ;
+    background-color: #f9f9f9;
     
 }
 /* Bordered form */
@@ -164,4 +168,77 @@ span.psw {
 
 .div{
     height: 100%;
+}
+ 
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+.menubar {
+    background-color: transparent;
+    min-height: 100px;
+    height: 110px;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    padding: 10px 0px 0px 0px;
+    position: fixed;
+    z-index: 10;
+    overflow: hidden;
+    #menubar-button-area {
+   min-height: 110px;
+   padding: 0px 0px 0px 0px;
+   display: flex;
+    margin-left: auto;
+    margin-right: auto;
+   justify-content: space-between;
+   max-width: 500px;
+  -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.menu-button {
+	background-color:whitesmoke;
+    height: 100px;
+    width: 100px;
+	-moz-border-radius:100px;
+	-webkit-border-radius:100px;
+	border-radius:100px;
+    display: block;	
+    color:slategray;
+	font-family:Courier New;
+	font-size:14px;
+	font-weight:bold;
+	padding: 0px 0px 0px 0px;
+	text-decoration:none;
+    text-align: center;
+    line-height: 100px;
+    display: inline-block;
+    border        : 3px solid rgb(128,128,128);
+    z-index: 10;
+}
+
+
+.menu-button:hover {
+	background-color:#A6D785;
+    border        : 3px solid rgb(245,245,245);
+    color: whitesmoke;
+    cursor: pointer;
+}
+.menu-button:active {
+	position:relative;
+	top:1px;
+   	background-color:#A6D785;
+    color: whitesmoke;
+    border        : 3px solid rgb(245,245,245);
+
 }

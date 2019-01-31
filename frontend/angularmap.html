@@ -10,24 +10,32 @@
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-mapboxgl-directive/0.43.2/angular-mapboxgl-directive.min.js"></script>
     <link rel="stylesheet" href="style.css"/>
-      <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; height:100vh; width: 100%; }
-    </style>
-    <script src='map.js'>
-   
+<!--    <script src = map.js>-->
+          
+</script>
     </script>
   </head>
-  <body id = "map" ng-controller="GeolocateControlController">
-    <div mapboxgl 
-         gl-style = "'mapbox://styles/mapbox/light-v9'"
-         gl-controls="glControls" 
-         gl-zoom="{ value: 16 }" 
-         gl-pitch= "{ value : 15}"
-         gl-bearing= "{value: -17.6} "
-         gl-center="{ lng: -86.234192, lat: 41.702358}"
-         height="100vh"
-         ></div>
+    
+  <body  ng-view>
+    <div ng-controller = "AttachPopupMarkerController">
+        <div mapboxgl 
+            gl-style = "'mapbox://styles/mapbox/light-v9'"
+            gl-controls="glControls" 
+            gl-zoom="{ value: 16 }" 
+            gl-pitch= "{ value : 15}"
+            gl-bearing= "{value: -17.6} "
+            gl-center="{ lng: -86.234192, lat: 41.702358}"
+            height="100vh"
+            gl-markers="glMarkers">
+        </div>
+    </div>
+      <button onclick="goBack()">Go Back</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
   </body>
     
 </html>
