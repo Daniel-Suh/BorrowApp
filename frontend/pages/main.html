@@ -1,0 +1,11 @@
+<h1>{{appName}}</h1>
+<div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5" ng-repeat="item in items track by $index">
+                <h2>{{item.type}}</h2>
+                <img ng-src="{{item.image_url}}" class="img-responsive img-size" alt="Responsive image">
+            </div>
+        </div>
+    </div>
+</div>

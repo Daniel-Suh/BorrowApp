@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "angular-parse": "^0.2.2",
     "express": "^4.16.4",
     "stripe": "^6.13.0"
   },
