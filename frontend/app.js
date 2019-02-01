@@ -1,11 +1,6 @@
 // MODULE
 var angularApp = angular.module('angularApp', ['ngRoute', 'mapboxgl-directive','ngParse']);
-angularApp.config(['ParseProvider', function(ParseProvider) {
-    var MY_PARSE_APP_ID = 'Ij4XrXhKGUbcR0Iir0OqXczyXGTlQz6ahMCOwSZj';
-    var MY_PARSE_JS_KEY = 'az2K7ObJFnc64jG6Cwd9YIvlGaxDFKbzoTVBU4wt';
-    ParseProvider.initialize(MY_PARSE_APP_ID, MY_PARSE_JS_KEY);
-    ParseProvider.serverURL = 'https://parseapi.back4app.com';
-  }]);
+
 
 angularApp.config(function ($routeProvider) {
 
@@ -27,7 +22,6 @@ angularApp.config(function ($routeProvider) {
 });
 // CONTROLLERS
 
-=======
 // TODO : 
 // 1. Get All Categories method
 // 2. Pair Program with Sarah to figure out routing
@@ -37,7 +31,7 @@ angularApp.controller('mainController', ['$scope', '$http','$location', '$log', 
     //CategoryModel.data = CategoryModel.New();
     //var category = CategoryModel.New({ name: 'myname' });
     //ItemsModel.New(itemsEx.json);
-    var category = CategoryModel.New();
+    //var category = CategoryModel.New();
     /*
     CategoryModel.getById('5azbFTutkw').then(function(result){
         console.log('Category Result: ', result);
@@ -47,6 +41,7 @@ angularApp.controller('mainController', ['$scope', '$http','$location', '$log', 
     });
     */
     $scope.appName = 'Borrowing Like a Champion Today';
+    
     $log.info($location.path());
     // Simple GET request example:
     $http({
@@ -65,7 +60,12 @@ angularApp.controller('mainController', ['$scope', '$http','$location', '$log', 
 }]);
 
   
-
+angularApp.config(['ParseProvider', function(ParseProvider) {
+    var MY_PARSE_APP_ID = 'Ij4XrXhKGUbcR0Iir0OqXczyXGTlQz6ahMCOwSZj';
+    var MY_PARSE_JS_KEY = 'az2K7ObJFnc64jG6Cwd9YIvlGaxDFKbzoTVBU4wt';
+    ParseProvider.initialize(MY_PARSE_APP_ID, MY_PARSE_JS_KEY);
+    ParseProvider.serverURL = 'https://parseapi.back4app.com';
+  }]);
 //function on() {
 //    document.getElementById("overlay").style.display = "block";
 //}
