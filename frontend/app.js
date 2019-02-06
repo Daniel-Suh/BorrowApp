@@ -32,11 +32,12 @@ angularApp.controller('mainController', ['$scope', '$http','$location', '$log', 
     //var category = CategoryModel.New({ name: 'myname' });
     //ItemsModel.New(itemsEx.json);
     //var category = CategoryModel.New();
-    /*
-    CategoryModel.getById('5azbFTutkw').then(function(result){
+    
+    CategoryModel.getById('xBRv2WZDZa').then(function(result){
         console.log('Category Result: ', result);
+
     });
-    ItemsModel.getById('kDc3dH1iuc').then(function(result){
+    /*ItemsModel.getById('kDc3dH1iuc').then(function(result){
         console.log('Items Result: ', result);
     });
     */
@@ -248,6 +249,23 @@ angularApp.service('ItemsModel', ['Parse', function(Parse){
                 this.data = result;
                 return Promise.resolve(result);
             }).catch(error => Promise.reject(error));
+    }
+    function getByCategoryAndLocation(category, location) {
+        const location.latitude = ;
+        const location.longitude = ;
+        const geoLocation = new Parse.GeoPoint(location.latitude, location.longitude);
+        const distance = .2;
+        const sorted = true;
+        return new this.Parse.Query(this.New())
+            .equalTo('category', category)
+            .withinKilometers("location", geoLocation, distance, sorted)
+            .find()
+            .then(result => {
+                this.Parse.defineAttributes(result, this.fields);
+                this.data = result;
+                console.log('result', result)
+                return result
+            })
     }
     /*getByName(name) {
         console.log('name', name)
