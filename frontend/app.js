@@ -84,7 +84,7 @@ angularApp.run([function () {
 //          }
 //        };
 //      }])
-angularApp.controller('AttachPopupMarkerController', ['$scope', function ($scope) {
+angularApp.controller('AttachPopupMarkerController', ['$scope', 'ItemsModel', function ($scope, ItemsModel) {
     $scope.appName = 'Map Page';
     
     function createElement(iconSize) {
@@ -140,6 +140,12 @@ angularApp.controller('AttachPopupMarkerController', ['$scope', function ($scope
             }
         }
     }
+    $scope.$on('mapboxglGeolocate:geolocate', function (angularEvent, mapboxglEvent){
+        console.log('angularEvent ', angularEvent)
+        console.log('mapboxglEvent ', mapboxglEvent)
+        ItemsModel.userGeolocation = mapboxglEvent.coords
+        console.log('ItemsModel ', ItemsModel.userGeolocation)
+    })
 }]);
 /**
  * @ngdoc service
@@ -227,6 +233,7 @@ angularApp.service('ItemsModel', ['Parse', function(Parse){
         'lender',
         'category'
     ];
+    this.userGeolocation = {};
 
     this.New = New;
     this.getById = getById;
